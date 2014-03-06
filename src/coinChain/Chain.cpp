@@ -184,22 +184,22 @@ bool BitcoinChain::isStandard(const Transaction& tx) const {
         // pay-to-script-hash, which is 3 ~80-byte signatures, 3
         // ~65-byte public keys, plus a few script ops.
         if (txin.signature().size() > 500) {
-            log_debug("nonstandard txin, size too big: %s", txin.signature().toString());
+            log_warn("nonstandard txin, size too big: %s", txin.signature().toString());
             return false;
         }
         if (!txin.signature().isPushOnly()) {
-            log_debug("nonstandard txin, signature is not push only: %s", txin.signature().toString());
+            log_warn("nonstandard txin, signature is not push only: %s", txin.signature().toString());
             return false;
         }
     }
     BOOST_FOREACH(const Output& txout, tx.getOutputs()) {
         vector<pair<opcodetype, valtype> > solution;
         if (!Solver(txout.script(), solution)) {
-            log_debug("nonstandard txout - solver returned false: %s", txout.script().toString());
+            log_warn("nonstandard txout - solver returned false: %s", txout.script().toString());
             return false;
         }
         if (txout.isDust(MIN_RELAY_TX_FEE)) {
-            log_debug("nonstandard txout - is dust, value = %d", txout.value());
+            log_warn("nonstandard txout - is dust, value = %d", txout.value());
             return false;
         }
     }
@@ -244,7 +244,7 @@ unsigned int BitcoinChain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
     if (nActualTimespan > nTargetTimespan*4)
@@ -361,7 +361,7 @@ unsigned int TestNet3Chain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
     if (nActualTimespan > nTargetTimespan*4)
@@ -453,22 +453,22 @@ bool NamecoinChain::isStandard(const Transaction& tx) const {
         // pay-to-script-hash, which is 3 ~80-byte signatures, 3
         // ~65-byte public keys, plus a few script ops.
         if (txin.signature().size() > 500) {
-            log_debug("nonstandard txin, size too big: %s", txin.signature().toString());
+            log_warn("nonstandard txin, size too big: %s", txin.signature().toString());
             return false;
         }
         if (!txin.signature().isPushOnly()) {
-            log_debug("nonstandard txin, signature is not push only: %s", txin.signature().toString());
+            log_warn("nonstandard txin, signature is not push only: %s", txin.signature().toString());
             return false;
         }
     }
     BOOST_FOREACH(const Output& txout, tx.getOutputs()) {
         vector<pair<opcodetype, valtype> > solution;
         if (!Solver(txout.script(), solution)) {
-            log_debug("nonstandard txout - solver returned false: %s", txout.script().toString());
+            log_warn("nonstandard txout - solver returned false: %s", txout.script().toString());
             return false;
         }
         if (txout.isDust(MIN_RELAY_TX_FEE)) {
-            log_debug("nonstandard txout - is dust, value = %d", txout.value());
+            log_warn("nonstandard txout - is dust, value = %d", txout.value());
             return false;
         }
     }
@@ -479,7 +479,7 @@ bool NamecoinChain::isStandard(const Transaction& tx) const {
 /// This function has changed as it served two purposes: sanity check for headers and real proof of work check. We only need the proofOfWorkLimit for the latter
 /// For namecoin we allow merged mining for the PoW!
 const bool NamecoinChain::checkProofOfWork(const Block& block) const {
-    log_trace("Enter %s (block.version = %d)", __FUNCTION__, block.getVersion());
+    log_info("Enter %s (block.version = %d)", __FUNCTION__, block.getVersion());
     // we accept aux pow all the time - the lockins will ensure we get the right chain
     // Prevent same work from being submitted twice:
     // - this block must have our chain ID
@@ -508,7 +508,7 @@ const bool NamecoinChain::checkProofOfWork(const Block& block) const {
         if (block.getHash() > target.getuint256())
             return error("CheckProofOfWork() : proof of work failed");
     }
-    log_trace("Return(true): %s", __FUNCTION__);
+    log_info("Return(true): %s", __FUNCTION__);
     return true;
 }
 
@@ -534,7 +534,7 @@ unsigned int NamecoinChain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
     if (nActualTimespan > nTargetTimespan*4)
@@ -682,7 +682,7 @@ unsigned int LitecoinChain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
     if (nActualTimespan > nTargetTimespan*4)
@@ -868,7 +868,7 @@ unsigned int TerracoinChain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
     if (nActualTimespan > nTargetTimespan*4)
@@ -1061,7 +1061,7 @@ unsigned int DogecoinChain::nextWorkRequired(BlockIterator blk) const {
     
     // Limit adjustment step
     int nActualTimespan = blk->time - former->time;
-    log_debug("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
+    log_warn("  nActualTimespan = %"PRI64d"  before bounds", nActualTimespan);
     if(h+1 > 10000) {
         if (nActualTimespan < nTargetTimespan/4)
             nActualTimespan = nTargetTimespan/4;

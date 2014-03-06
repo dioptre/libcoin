@@ -289,7 +289,7 @@ void Node::start_connect() {
     // TODO: we should check for validity of the candidate - if not valid we could retry later, give up or wait for a new Peer before we try a new connect. 
     stringstream ss;
     ss << ep;
-    log_debug("Trying connect to: %s", ss.str());
+    log_warn("Trying connect to: %s", ss.str());
     _new_server.reset(new Peer(_blockChain.chain(), _io_service, _peerManager, _messageHandler, false, _proxy, _blockChain.getBestHeight(), getFullClientVersion())); // false means outbound
     _new_server->addr = ep;
     // Set a deadline for the connect operation.
@@ -311,7 +311,7 @@ void Node::check_deadline(const boost::system::error_code& e) {
             // The deadline has passed. The socket is closed so that any outstanding
             // asynchronous operations are cancelled.
             if(_new_server) {
-                log_debug("Closing socket of: %s", _new_server->addr.toString().c_str());
+                log_warn("Closing socket of: %s", _new_server->addr.toString().c_str());
                 _new_server->socket().close();
             }
             
@@ -332,7 +332,7 @@ void Node::handle_connect(const system::error_code& e) {
         _peerManager.start(_new_server);
     }
     else {
-        log_debug("Failed connect: \"%s\" to: %s", e.message().c_str(), _new_server->addr.toString().c_str());
+        log_warn("Failed connect: \"%s\" to: %s", e.message().c_str(), _new_server->addr.toString().c_str());
     }
     
     //    _endpointPool.getEndpoint(_new_server->addr.getKey()).setLastTry(GetAdjustedTime());
@@ -368,14 +368,14 @@ void Node::handle_accept(const system::error_code& e) {
 void Node::accept_or_connect() {
     // only start a connect or accept if we have not one pending already
     if (!_new_client) {
-        log_debug("Inbound connections are now: %d", _peerManager.getNumInbound());
+        log_warn("Inbound connections are now: %d", _peerManager.getNumInbound());
         
         if (_peerManager.getNumInbound() < _max_inbound) // start_accept will not be called again before we get a read/write error on a socket
             if(_acceptor.is_open()) start_accept();
     }
         
     if (!_new_server) {
-        log_debug("Outbound connections are now: %d", _peerManager.getNumOutbound());
+        log_warn("Outbound connections are now: %d", _peerManager.getNumOutbound());
         
         if (_peerManager.getNumOutbound() < _max_outbound) // start_accept will not be called again before we get a read/write error on a socket
             start_connect();         

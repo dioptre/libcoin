@@ -236,7 +236,7 @@ void Connection::handle_timeout(const boost::system::error_code& e) {
         }        
     }
     else if (e != error::operation_aborted) {
-        log_debug("Possible boost keep_alive timer error in Server: %s\n", e.message().c_str());
+        log_warn("Possible boost keep_alive timer error in Server: %s\n", e.message().c_str());
     }
 }
 

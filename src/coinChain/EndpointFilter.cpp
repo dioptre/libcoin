@@ -24,7 +24,7 @@ using namespace std;
 using namespace boost;
 
 bool EndpointFilter::operator()(Peer* origin, Message& msg) {
-    log_trace("args: origin: %s, msg: %s", origin->addr.toString(), msg.command());
+    log_info("args: origin: %s, msg: %s", origin->addr.toString(), msg.command());
     if (origin->nVersion == 0) {
         throw OriginNotReady();
     }
@@ -42,7 +42,7 @@ bool EndpointFilter::operator()(Peer* origin, Message& msg) {
         if (endpoints.size() > 1000)
             return error("message addr size() = %d", endpoints.size());
         
-        log_debug("PEERS: %d addresses received from %s", endpoints.size(), origin->addr.toString());
+        log_warn("PEERS: %d addresses received from %s", endpoints.size(), origin->addr.toString());
         
         // Store the new addresses
         //        CAddrDB addrDB;
@@ -50,7 +50,7 @@ bool EndpointFilter::operator()(Peer* origin, Message& msg) {
         int64_t now = GetAdjustedTime();
         int64_t since = now - 10 * 60;
         BOOST_FOREACH(Endpoint& ep, endpoints) {
-            log_trace("adding endpoint: %s", ep.toString());
+            log_info("adding endpoint: %s", ep.toString());
             // ignore IPv6 for now, since it isn't implemented anyway
             if (!ep.isIPv4())
                 continue;

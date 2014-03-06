@@ -214,7 +214,7 @@ void Wallet::WalletUpdateSpent(const Transaction &tx)
                 CWalletTx& wtx = (*mi).second;
                 if (!wtx.IsSpent(txin.prevout().index) && IsMine(wtx.getOutput(txin.prevout().index)))
                 {
-                    log_debug("WalletUpdateSpent found spent coin %sbc %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.getHash().toString().c_str());
+                    log_info("WalletUpdateSpent found spent coin %sbc %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.getHash().toString().c_str());
                     wtx.MarkSpent(txin.prevout().index);
                     wtx.WriteToDisk();
                     vWalletUpdated.push_back(txin.prevout().hash);
@@ -261,7 +261,7 @@ bool Wallet::AddToWallet(const CWalletTx& wtxIn)
         }
 
         //// debug print
-        log_debug("AddToWallet %s  %s%s\n", wtxIn.getHash().toString().substr(0,10).c_str(), (fInsertedNew ? "new" : ""), (fUpdated ? "update" : ""));
+        log_info("AddToWallet %s  %s%s\n", wtxIn.getHash().toString().substr(0,10).c_str(), (fInsertedNew ? "new" : ""), (fUpdated ? "update" : ""));
 
         // Write to disk
         if (fInsertedNew || fUpdated)
@@ -734,11 +734,11 @@ bool Wallet::SelectCoinsMinConf(int64_t nTargetValue, int nConfMine, int nConfTh
             }
 
         //// debug print
-        log_debug("SelectCoins() best subset: ");
+        log_info("SelectCoins() best subset: ");
         for (int i = 0; i < vValue.size(); i++)
             if (vfBest[i])
-                log_debug("%s ", FormatMoney(vValue[i].first).c_str());
-        log_debug("total %s\n", FormatMoney(nBest).c_str());
+                log_info("%s ", FormatMoney(vValue[i].first).c_str());
+        log_info("total %s\n", FormatMoney(nBest).c_str());
     }
 
     return true;
@@ -827,7 +827,7 @@ bool Wallet::CreateTransaction(const vector<pair<Script, int64_t> >& vecSend, CW
                     else
                         scriptChange << vchPubKey << OP_CHECKSIG;
 
-                log_debug("Change Script: %s", scriptChange.toString().c_str());
+                log_info("Change Script: %s", scriptChange.toString().c_str());
                     // Insert change txn at random position:
                     unsigned int position = GetRandInt(wtxNew.getNumOutputs());
                     wtxNew.insertOutput(position, Output(nChange, scriptChange));

@@ -106,7 +106,7 @@ public:
             if (cnf == _confirmations.end())
                 continue;
             const Transaction& txn = cnf->second;
-            outputs.push_back(std::make_pair<Coin, Output>(o->second, txn.getOutput(o->second.index)));
+            outputs.push_back(std::pair<Coin, Output>(o->second, txn.getOutput(o->second.index)));
         }
 
         return outputs;

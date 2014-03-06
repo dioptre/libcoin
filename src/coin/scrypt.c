@@ -34,14 +34,14 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
 #include <string.h>
 #include <openssl/sha.h>
 
-static inline uint32_t be32dec(const void *pp)
+static __inline uint32_t be32dec(const void *pp)
 {
 	const uint8_t *p = (uint8_t const *)pp;
 	return ((uint32_t)(p[3]) + ((uint32_t)(p[2]) << 8) +
 	    ((uint32_t)(p[1]) << 16) + ((uint32_t)(p[0]) << 24));
 }
 
-static inline void be32enc(void *pp, uint32_t x)
+static __inline void be32enc(void *pp, uint32_t x)
 {
 	uint8_t *p = (uint8_t *)pp;
 	p[3] = x & 0xff;
@@ -50,14 +50,14 @@ static inline void be32enc(void *pp, uint32_t x)
 	p[0] = (x >> 24) & 0xff;
 }
 
-static inline uint32_t le32dec(const void *pp)
+static __inline uint32_t le32dec(const void *pp)
 {
 	const uint8_t *p = (uint8_t const *)pp;
 	return ((uint32_t)(p[0]) + ((uint32_t)(p[1]) << 8) +
 	    ((uint32_t)(p[2]) << 16) + ((uint32_t)(p[3]) << 24));
 }
 
-static inline void le32enc(void *pp, uint32_t x)
+static __inline void le32enc(void *pp, uint32_t x)
 {
 	uint8_t *p = (uint8_t *)pp;
 	p[0] = x & 0xff;
@@ -78,7 +78,7 @@ HMAC_SHA256_Init(HMAC_SHA256_CTX *ctx, const void *_K, size_t Klen)
 {
 	unsigned char pad[64];
 	unsigned char khash[32];
-	const unsigned char *K = _K;
+	const unsigned char *K = (const unsigned char*)_K;
 	size_t i;
 
 	/* If Klen > 64, the key is really SHA256(K). */
@@ -195,7 +195,7 @@ PBKDF2_SHA256(const uint8_t *passwd, size_t passwdlen, const uint8_t *salt,
 
 #define ROTL(a, b) (((a) << (b)) | ((a) >> (32 - (b))))
 
-static inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
+static __inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
 {
 	uint32_t x00,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x13,x14,x15;
 	int i;
@@ -296,6 +296,6 @@ void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad)
 
 void scrypt_1024_1_1_256(const char *input, char *output)
 {
-	char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
+	char* scratchpad = (char*)malloc(SCRYPT_SCRATCHPAD_SIZE*sizeof(char));
 	scrypt_1024_1_1_256_sp(input, output, scratchpad);
 }

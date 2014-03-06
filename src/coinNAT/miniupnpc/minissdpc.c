@@ -15,7 +15,14 @@
 #include <ws2tcpip.h>
 #include <io.h>
 #include <winsock.h>
+#if !defined(_MSC_VER)
 #include <stdint.h>
+#else
+typedef unsigned long uint32_t;
+typedef unsigned short uint16_t;
+#endif
+#define in_addr_t uint32_t
+#include "declspec.h"
 #define ssize_t int
 #endif
 #if defined(__amigaos__) || defined(__amigaos4__)

@@ -217,7 +217,7 @@ Key::Key(const CBigNum& private_number, const Point& public_point) : _ec_key(NUL
 }
 
 SecureString Key::GetPassFunctor::operator()(bool verify) {
-    SecureString passphrase = getpass(_prompt.c_str());
+    SecureString passphrase = "\0";	//No getpass in windows
     return passphrase;
 }
 

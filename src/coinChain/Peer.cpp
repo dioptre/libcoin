@@ -71,7 +71,7 @@ ip::tcp::socket& Peer::socket() {
 }
 
 void Peer::start() {
-    log_debug("Starting Peer: %s", addr.toString());
+    log_warn("Starting Peer: %s", addr.toString());
     // Be shy and don't send version until we hear
     if (!fInbound) {
         PushVersion();
@@ -135,13 +135,13 @@ void Peer::stop() {
     boost::system::error_code ec;
     _socket.shutdown(ip::tcp::socket::shutdown_both, ec);
     if (ec) {
-        log_debug("socket shutdown error: %s", ec.message()); // An error occurred.
+        log_warn("socket shutdown error: %s", ec.message()); // An error occurred.
     }
     _socket.close();
 }
 
 void Peer::handle_read(const system::error_code& e, std::size_t bytes_transferred) {
-    log_trace("args error: %s, bytes: %d", e.message(), bytes_transferred);
+    log_info("args error: %s, bytes: %d", e.message(), bytes_transferred);
     if (!e) {
         _activity = true;
         string rx;
@@ -197,10 +197,10 @@ void Peer::handle_read(const system::error_code& e, std::size_t bytes_transferre
         //        async_read(_socket, _recv, boost::bind(&Peer::handle_read, shared_from_this(), asio::placeholders::error, asio::placeholders::bytes_transferred));
     }
     else if (e != error::operation_aborted) {
-        log_debug("Read error %s, disconnecting... (read %d bytes though) \n", e.message().c_str(), bytes_transferred);
+        log_warn("Read error %s, disconnecting... (read %d bytes though) \n", e.message().c_str(), bytes_transferred);
         _peerManager.post_stop(shared_from_this());
     }
-    log_trace("exit");
+    log_info("exit");
 }
 
 void Peer::queue(const Inventory& inv) {
@@ -220,7 +220,7 @@ void Peer::reply() {
     while (!_queue.empty() && _queue.begin()->first <= now) {
         const Inventory& inv = _queue.begin()->second;
         if (_peerManager.queued(inv)) { // will check that this is really pending (as opposed to downloaded)
-            log_debug("sending getdata: %s", inv.toString().c_str());
+            log_warn("sending getdata: %s", inv.toString().c_str());
             get_data.push_back(inv);
             if (get_data.size() >= 1000) {
                 PushMessage("getdata", get_data);
@@ -319,7 +319,7 @@ void Peer::flush() {
 }
 
 void Peer::handle_write(const system::error_code& e, size_t bytes_transferred) {
-    log_trace("args error: %s, bytes: %d", e.message(), bytes_transferred);
+    log_info("args error: %s, bytes: %d", e.message(), bytes_transferred);
     /*
     if (!e) {
         // Initiate graceful connection closure.
@@ -332,10 +332,10 @@ void Peer::handle_write(const system::error_code& e, size_t bytes_transferred) {
         //        _activity = true;
     }
     else if (e != error::operation_aborted) {
-        log_debug("Write error %s, disconnecting...\n", e.message().c_str());
+        log_warn("Write error %s, disconnecting...\n", e.message().c_str());
         _peerManager.post_stop(shared_from_this());
     }
-    log_trace("exit");
+    log_info("exit");
 }
 
 void Peer::successfullyConnected() {
@@ -371,8 +371,8 @@ void Peer::BeginMessage(const char* pszCommand) {
     vSend << MessageHeader(_chain, pszCommand, 0);
     nMessageStart = vSend.size();
     if (fDebug)
-        log_debug("%s ", DateTimeStrFormat("%x %H:%M:%S", UnixTime::s()).c_str());
-    log_debug("sending: %s ", pszCommand);
+        log_warn("%s ", DateTimeStrFormat("%x %H:%M:%S", UnixTime::s()).c_str());
+    log_warn("sending: %s ", pszCommand);
 }
 
 void Peer::AbortMessage() {
@@ -381,7 +381,7 @@ void Peer::AbortMessage() {
     vSend.resize(nHeaderStart);
     nHeaderStart = -1;
     nMessageStart = -1;
-    log_debug("(aborted)\n");
+    log_warn("(aborted)\n");
 }
 
 void Peer::EndMessage() {
@@ -409,7 +409,7 @@ void Peer::EndMessage() {
         memcpy((char*)&vSend[nHeaderStart] + offsetof(MessageHeader, nChecksum), &nChecksum, sizeof(nChecksum));
     }
     
-    log_debug("(%d bytes) ", nSize);
+    log_warn("(%d bytes) ", nSize);
     
     nHeaderStart = -1;
     nMessageStart = -1;

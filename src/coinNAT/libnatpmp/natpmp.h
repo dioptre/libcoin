@@ -41,8 +41,12 @@ POSSIBILITY OF SUCH DAMAGE.
 #if !defined(_MSC_VER)
 #include <stdint.h>
 #else
-typedef unsigned long uint32_t;
-typedef unsigned short uint16_t;
+typedef __int16 int16_t;
+typedef unsigned __int16 uint16_t;
+typedef __int32 int32_t;
+typedef unsigned __int32 uint32_t;
+typedef __int64 int64_t;
+typedef unsigned __int64 uint64_t;
 #endif
 #define in_addr_t uint32_t
 #include "declspec.h"

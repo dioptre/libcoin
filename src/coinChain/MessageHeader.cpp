@@ -78,7 +78,7 @@ bool MessageHeader::IsValid(const Chain& chain) const
     // Message size
     if (nMessageSize > MAX_SIZE)
     {
-        log_debug("MessageHeader::IsValid() : (%s, %u bytes) nMessageSize > MAX_SIZE\n", GetCommand().c_str(), nMessageSize);
+        log_warn("MessageHeader::IsValid() : (%s, %u bytes) nMessageSize > MAX_SIZE\n", GetCommand().c_str(), nMessageSize);
         return false;
     }
 

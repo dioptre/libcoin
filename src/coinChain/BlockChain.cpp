@@ -378,7 +378,7 @@ std::pair<Claims::Spents, int64_t> BlockChain::try_claim(const Transaction& txn,
         throw Error(string("claim(Transaction): ") + e.what());
     }
 
-    return make_pair<Claims::Spents, int64_t>(spents, fee);
+    return pair<Claims::Spents, int64_t>(spents, fee);
 }
 
 // claim, claims a transaction expecting it to go into a block in the near future

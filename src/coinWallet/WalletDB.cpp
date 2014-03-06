@@ -275,7 +275,7 @@ int CWalletDB::LoadWallet(Wallet* pwallet)
     BOOST_FOREACH(uint256 hash, vWalletUpgrade)
         WriteTx(hash, pwallet->mapWallet[hash]);
 
-    log_debug("nFileVersion = %d\n", nFileVersion);
+    log_info("nFileVersion = %d\n", nFileVersion);
 
     // Upgrade
     if (nFileVersion < PROTOCOL_VERSION)

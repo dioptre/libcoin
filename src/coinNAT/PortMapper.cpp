@@ -58,7 +58,7 @@ void PortMapper::handle_mapping(const boost::system::error_code& e) {
     if(e == error::operation_aborted)
         return; // ignore cancel
     if(e) {
-        log_debug("PortMapper timer error: %s\n", e.message().c_str());
+        log_warn("PortMapper timer error: %s\n", e.message().c_str());
         _repeat_timer.expires_from_now(boost::posix_time::seconds(_repeat_interval));
     }
     else {

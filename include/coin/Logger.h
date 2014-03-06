@@ -113,8 +113,8 @@ private:
 #define log_warn(fmt, ...) Logger::log(Logger::warn, __FILE__, __LINE__, __FUNCTION__) << cformat(fmt, ##__VA_ARGS__) << std::endl
 #define log_info(fmt, ...) Logger::log(Logger::info, __FILE__, __LINE__, __FUNCTION__) << cformat(fmt, ##__VA_ARGS__) << std::endl
 
-#define log_debug(...) Logger::log(Logger::debug, __FILE__, __LINE__, __PRETTY_FUNCTION__) << cformat(__VA_ARGS__) << std::endl
-#define log_trace(...) Logger::log(Logger::trace, __FILE__, __LINE__, __PRETTY_FUNCTION__) << cformat(__VA_ARGS__) << std::endl
+#define log_debug(...) Logger::log(Logger::debug, __FILE__, __LINE__, __FUNCTION__) << cformat(__VA_ARGS__) << std::endl
+#define log_trace(...) Logger::log(Logger::trace, __FILE__, __LINE__, __FUNCTION__) << cformat(__VA_ARGS__) << std::endl
 
 //#define log_debug(...) do {} while(0)
 //#define log_trace(...) do {} while(0)

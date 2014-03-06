@@ -156,7 +156,7 @@ void RandAddSeedPerfmon()
     {
         RAND_add(pdata, nSize, nSize/100.0);
         memset(pdata, 0, nSize);
-        log_debug("%s RandAddSeed() %d bytes\n", DateTimeStrFormat("%x %H:%M", UnixTime::s()).c_str(), nSize);
+        log_warn("%s RandAddSeed() %d bytes\n", DateTimeStrFormat("%x %H:%M", UnixTime::s()).c_str(), nSize);
     }
 #endif
 }
@@ -683,7 +683,7 @@ void AddTimeData(unsigned int ip, int64_t nTime)
     if (vTimeOffsets.empty())
         vTimeOffsets.push_back(0);
     vTimeOffsets.push_back(nOffsetSample);
-    log_debug("Added time data, samples %d, offset %+"PRI64d" (%+"PRI64d" minutes)\n", vTimeOffsets.size(), vTimeOffsets.back(), vTimeOffsets.back()/60);
+    log_warn("Added time data, samples %d, offset %+"PRI64d" (%+"PRI64d" minutes)\n", vTimeOffsets.size(), vTimeOffsets.back(), vTimeOffsets.back()/60);
     if (vTimeOffsets.size() >= 5 && vTimeOffsets.size() % 2 == 1)
     {
         sort(vTimeOffsets.begin(), vTimeOffsets.end());
@@ -717,8 +717,8 @@ void AddTimeData(unsigned int ip, int64_t nTime)
             }
         }
         BOOST_FOREACH(int64_t n, vTimeOffsets)
-            log_debug("%+d  ", n);
-        log_debug("|  nTimeOffset = %+d  (%+d minutes)\n", nTimeOffset, nTimeOffset/60);
+            log_warn("%+d  ", n);
+        log_warn("|  nTimeOffset = %+d  (%+d minutes)\n", nTimeOffset, nTimeOffset/60);
     }
 }
 

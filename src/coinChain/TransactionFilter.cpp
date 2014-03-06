@@ -50,7 +50,7 @@ bool TransactionFilter::operator()(Peer* origin, Message& msg) {
             return error("message getdata size() = %d", vInv.size());
         
         BOOST_FOREACH(const Inventory& inv, vInv) {
-            log_debug("received getdata for: %s\n", inv.toString().c_str());
+            log_warn("received getdata for: %s\n", inv.toString().c_str());
             
             if (inv.getType() == MSG_TX) {
                 // Send stream from relay memory
@@ -76,7 +76,7 @@ bool TransactionFilter::operator()(Peer* origin, Message& msg) {
                 origin->AddInventoryKnown(inv);
                 
                 bool fAlreadyHave = alreadyHave(inv);
-                log_debug("  got inventory: %s  %s\n", inv.toString().c_str(), fAlreadyHave ? "have" : "new");
+                log_warn("  got inventory: %s  %s\n", inv.toString().c_str(), fAlreadyHave ? "have" : "new");
                 
                 if (!fAlreadyHave)
                     origin->queue(inv);
@@ -98,7 +98,7 @@ void TransactionFilter::process(Transaction& tx, Peers peers) {
     //    bool fMissingInputs = false;
     try {
         _blockChain.claim(tx);
-        log_debug("accepted txn: %s", tx.getHash().toString().substr(0,10));
+        log_warn("accepted txn: %s", tx.getHash().toString().substr(0,10));
 
         for(Listeners::iterator listener = _listeners.begin(); listener != _listeners.end(); ++listener)
             (*listener->get())(tx);
@@ -120,7 +120,7 @@ void TransactionFilter::process(Transaction& tx, Peers peers) {
                     _blockChain.claim(tx);
                     for(Listeners::iterator listener = _listeners.begin(); listener != _listeners.end(); ++listener)
                         (*listener->get())(tx);
-                    log_debug("   accepted orphan tx %s", inv.getHash().toString().substr(0,10).c_str());
+                    log_warn("   accepted orphan tx %s", inv.getHash().toString().substr(0,10).c_str());
                     //                        SyncWithWallets(tx, NULL, true);
                     relayMessage(peers, inv, payload);
                     workQueue.push_back(inv.getHash());
@@ -135,8 +135,8 @@ void TransactionFilter::process(Transaction& tx, Peers peers) {
         eraseOrphanTx(hash);
     }
     catch (BlockChain::Reject& e) {
-        log_debug("acceptTransaction Warning: %s", e.what());
-        log_debug("storing orphan tx %s", inv.getHash().toString().substr(0,10).c_str());
+        log_warn("acceptTransaction Warning: %s", e.what());
+        log_warn("storing orphan tx %s", inv.getHash().toString().substr(0,10).c_str());
         addOrphanTx(tx);
     }
     catch (BlockChain::Error& e) {

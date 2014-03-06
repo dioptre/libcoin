@@ -72,5 +72,6 @@ bool Miner::mine() {
     
     if (_generate)
         _io_service.post(boost::bind(&Miner::mine, this));
+	return true;
 }
 

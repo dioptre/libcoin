@@ -98,7 +98,7 @@ CDB::CDB(const std::string dataDir, const char* pszFile, const char* pszMode) : 
             string strLogDir = strDataDir + "/database";
             filesystem::create_directory(strLogDir.c_str());
             string strErrorFile = strDataDir + "/db.log";
-            log_debug("dbenv.open strLogDir=%s strErrorFile=%s\n", strLogDir.c_str(), strErrorFile.c_str());
+            log_info("dbenv.open strLogDir=%s strErrorFile=%s\n", strLogDir.c_str(), strErrorFile.c_str());
 
             dbenv.set_alloc(&malloc, &realloc, &free); // WIN32 fix to force the same alloc/realloc and free routines in db and outside 
             dbenv.set_lg_dir(strLogDir.c_str());
@@ -215,13 +215,13 @@ void DBFlush(bool fShutdown)
         {
             string strFile = (*mi).first;
             int nRefCount = (*mi).second;
-            log_debug("%s refcount=%d\n", strFile.c_str(), nRefCount);
+            log_info("%s refcount=%d\n", strFile.c_str(), nRefCount);
             if (nRefCount == 0)
             {
                 // Move log data to the dat file
                 CloseDb(strFile);
                 dbenv.txn_checkpoint(0, 0, 0);
-                log_debug("%s flush\n", strFile.c_str());
+                log_info("%s flush\n", strFile.c_str());
                 dbenv.lsn_reset(strFile.c_str(), 0);
                 mapFileUseCount.erase(mi++);
             }

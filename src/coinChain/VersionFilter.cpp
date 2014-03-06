@@ -58,7 +58,7 @@ bool VersionFilter::operator() (Peer* origin, Message& msg) {
         
         // Disconnect if we connected to ourself
         if (nNonce == origin->getNonce() && nNonce > 1) {
-            log_debug("connected to self at %s, disconnecting\n", origin->addr.toString().c_str());
+            log_warn("connected to self at %s, disconnecting\n", origin->addr.toString().c_str());
             origin->fDisconnect = true;
             return true;
         }

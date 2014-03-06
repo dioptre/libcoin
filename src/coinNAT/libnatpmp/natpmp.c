@@ -114,7 +114,7 @@ int sendpendingrequest(natpmp_t * p)
 	addr.sin_addr.s_addr = p->gateway;
 	r = (int)sendto(p->s, p->pending_request, p->pending_request_len, 0,
 	                   (struct sockaddr *)&addr, sizeof(addr));*/
-	r = (int)send(p->s, p->pending_request, p->pending_request_len, 0);
+	r = (int)send(p->s, (const char*) p->pending_request, p->pending_request_len, 0);
 	return (r<0) ? NATPMP_ERR_SENDERR : r;
 }
 
@@ -191,7 +191,7 @@ LIBSPEC int readnatpmpresponse(natpmp_t * p, natpmpresp_t * response)
 	int n;
 	if(!p)
 		return NATPMP_ERR_INVALIDARGS;
-	n = recvfrom(p->s, buf, sizeof(buf), 0,
+	n = recvfrom(p->s, (char*)buf, sizeof(buf), 0,
 	             (struct sockaddr *)&addr, &addrlen);
 	if(n<0)
 		switch(errno) {

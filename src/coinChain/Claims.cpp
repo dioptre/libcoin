@@ -43,13 +43,13 @@ void Claims::insert(Transaction txn, const Spents& spents, int64_t fee, unsigned
     }
     // insert all inputs in spent
     uint256 hash = claim.getHash();
-    _confirmations.insert(make_pair<uint256, Claim>(hash, claim));
+    _confirmations.insert(pair<uint256, Claim>(hash, claim));
     _priorities.insert(hash);
     _spents.insert(spents.begin(), spents.end());
     
     // insert the outputs in the map of scripts
     for (size_t idx = 0; idx < txn.getNumOutputs(); ++idx)
-        _scripts.insert(make_pair<Script, Coin>(txn.getOutput(idx).script(), Coin(hash, idx)));
+        _scripts.insert(pair<Script, Coin>(txn.getOutput(idx).script(), Coin(hash, idx)));
 }
 
 void Claims::erase(uint256 hash) {
