@@ -9,3 +9,10 @@ src/bitcoind
 *.o
 *.patch
 .bitcoin
+lib/
+bin/
+*.dir/
+Debug/
+Release/
+*.a
+

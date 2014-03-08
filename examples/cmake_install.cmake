@@ -1,4 +1,4 @@
-# Install script for directory: E:/expedit/projects/crednexus/src/main/libcoin/tests/sqliterate
+# Install script for directory: E:/expedit/projects/crednexus/src/main/libcoin/examples
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,13 +27,11 @@ IF(NOT CMAKE_INSTALL_COMPONENT)
   ENDIF(COMPONENT)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libcoin-tests")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/libcoin/bin" TYPE EXECUTABLE FILES "E:/expedit/projects/crednexus/src/main/libcoin/bin/sqliterate.exe")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/libcoin/bin/sqliterate.exe" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/libcoin/bin/sqliterate.exe")
-    IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "C:/MinGW/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/libcoin/bin/sqliterate.exe")
-    ENDIF(CMAKE_INSTALL_DO_STRIP)
-  ENDIF()
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libcoin-tests")
+IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  INCLUDE("E:/expedit/projects/crednexus/src/main/libcoin/examples/simplecoin/cmake_install.cmake")
+  INCLUDE("E:/expedit/projects/crednexus/src/main/libcoin/examples/ponzicoin/cmake_install.cmake")
+  INCLUDE("E:/expedit/projects/crednexus/src/main/libcoin/examples/extrawallet/cmake_install.cmake")
+
+ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
