@@ -32,10 +32,11 @@ protected:
 };
 
 /// Return the unconfirmed balance or Held balance.
-class COINWALLET_EXPORT GetHeldBalance : public GetBalance {
-    GetHeldBalance(Wallet& wallet) : GetBalance(wallet) {}
-    virtual json_spirit::Value operator() (const json_spirit::Array& params, bool fHelp);
-};
+//class COINWALLET_EXPORT GetHeldBalance : public GetBalance {
+//public:
+//    GetHeldBalance(Wallet& wallet) : GetBalance(wallet) {}
+//    virtual json_spirit::Value operator() (const json_spirit::Array& params, bool fHelp);
+//};
 
 /// Get a fresh address. This will reserve the address in the wallet and hence change the wallet state.
 class COINWALLET_EXPORT GetNewAddress : public WalletMethod {

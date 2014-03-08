@@ -20,7 +20,6 @@
 #include <boost/cstdint.hpp> 
 #include <boost/shared_ptr.hpp> 
 #include <boost/variant.hpp> 
-#include <coin/Export.h>
 
 namespace json_spirit
 {
