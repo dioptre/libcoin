@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F00673DB-F34B-4F6F-8DAB-A7E3E20591B5}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>coinPool</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">coinPool.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">coinPoold</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">coinPool.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">coinPool</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">coinPool.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">coinPools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">coinPool.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">coinPoolrd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);C:\OpenSSL-Win32\include</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);C:\boost\boost_1_54_0\stage\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR="Debug";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR=\"Debug\";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\coind.lib;..\..\lib\coinChaind.lib;..\..\lib\coinHTTPd.lib;..\..\lib\coinWalletd.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MDd.lib;C:\OpenSSL-Win32\lib\VC\libeay32MDd.lib;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\lib\libdb48.lib;C:\sqlite\sqlite3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>E:/expedit/projects/crednexus/src/main/libcoin/lib/coinPoold.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/expedit/projects/crednexus/src/main/libcoin/bin/coinPoold.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR="Release";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR=\"Release\";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\coin.lib;..\..\lib\coinChain.lib;..\..\lib\coinHTTP.lib;..\..\lib\coinWallet.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\lib\libdb48.lib;..\..\lib\coinChain.lib;C:\sqlite\sqlite3.lib;..\..\lib\coinHTTP.lib;..\..\lib\coin.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/expedit/projects/crednexus/src/main/libcoin/lib/coinPool.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/expedit/projects/crednexus/src/main/libcoin/bin/coinPool.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR="MinSizeRel";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR=\"MinSizeRel\";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\coins.lib;..\..\lib\coinChains.lib;..\..\lib\coinHTTPs.lib;..\..\lib\coinWallets.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\lib\libdb48.lib;..\..\lib\coinChains.lib;C:\sqlite\sqlite3.lib;..\..\lib\coinHTTPs.lib;..\..\lib\coins.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/expedit/projects/crednexus/src/main/libcoin/lib/coinPools.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/expedit/projects/crednexus/src/main/libcoin/bin/coinPools.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR="RelWithDebInfo";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;COINPOOL_LIBRARY;CMAKE_INTDIR=\"RelWithDebInfo\";coinPool_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\coinrd.lib;..\..\lib\coinChainrd.lib;..\..\lib\coinHTTPrd.lib;..\..\lib\coinWalletrd.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\lib\libdb48.lib;..\..\lib\coinChainrd.lib;C:\sqlite\sqlite3.lib;..\..\lib\coinHTTPrd.lib;..\..\lib\coinrd.lib;C:\OpenSSL-Win32\lib\VC\ssleay32MD.lib;C:\OpenSSL-Win32\lib\VC\libeay32MD.lib;C:\boost\boost_1_54_0\stage\lib\boost_chrono-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_date_time-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_regex-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_filesystem-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_system-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_program_options-vc110-mt-1_54.lib;C:\boost\boost_1_54_0\stage\lib\boost_thread-vc110-mt-1_54.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>E:/expedit/projects/crednexus/src/main/libcoin/lib/coinPoolrd.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/expedit/projects/crednexus/src/main/libcoin/bin/coinPoolrd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-file E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-file E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-file E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-file E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/src/coinPool/CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\coinPool\Export.h" />
+    <ClInclude Include="..\..\include\coinPool\GetBlockTemplate.h" />
+    <ClInclude Include="..\..\include\coinPool\GetWork.h" />
+    <ClInclude Include="..\..\include\coinPool\Miner.h" />
+    <ClInclude Include="..\..\include\coinPool\Pool.h" />
+    <ClInclude Include="..\..\include\coinPool\SubmitBlock.h" />
+    <ClInclude Include="..\..\include\coin\Config.h" />
+    <ClCompile Include="GetBlockTemplate.cpp" />
+    <ClCompile Include="GetWork.cpp" />
+    <ClCompile Include="Miner.cpp" />
+    <ClCompile Include="Pool.cpp" />
+    <ClCompile Include="SubmitBlock.cpp" />
+    <ResourceCompile Include="..\..\PlatformSpecifics\Windows\libcoinVersionInfo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/expedit/projects/crednexus/src/main/libcoin/ZERO_CHECK.vcxproj">
+      <Project>41F87EC0-F248-40A2-BB10-FE5C571D930A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/expedit/projects/crednexus/src/main/libcoin/src/coin/coin.vcxproj">
+      <Project>2347CDA3-E8BA-4509-BE31-629E99A5918C</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/expedit/projects/crednexus/src/main/libcoin/src/coinChain/coinChain.vcxproj">
+      <Project>132CCC9A-2224-4586-903B-D68ED5FD6FE7</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/expedit/projects/crednexus/src/main/libcoin/src/coinHTTP/coinHTTP.vcxproj">
+      <Project>28B2039E-F2F7-4309-BE9B-596EE6DD8243</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/expedit/projects/crednexus/src/main/libcoin/src/coinWallet/coinWallet.vcxproj">
+      <Project>CBBB1D06-D18B-4EA1-A884-16DAB76AC4F2</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

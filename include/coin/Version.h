@@ -1,0 +1,54 @@
+
+#ifndef COIN_VERSION
+#define COIN_VERSION 1
+
+#include <coin/Export.h>
+
+extern "C" {
+
+#define LIBCOIN_MAJOR_VERSION    0
+#define LIBCOIN_MINOR_VERSION    7
+#define LIBCOIN_PATCH_VERSION    03
+#define LIBCOIN_SOVERSION        0
+
+#define PROTOCOL_VERSION	((LIBCOIN_MAJOR_VERSION*1000000) + (LIBCOIN_MINOR_VERSION*10000) + (LIBCOIN_PATCH_VERSION*100) + (LIBCOIN_SOVERSION))
+
+/* Convenience macro that can be used to decide whether a feature is present or not i.e.
+ * #if COIN_MIN_VERSION_REQUIRED(0,4,0)
+ *    your code here
+ * #endif
+ */
+#define COIN_MIN_VERSION_REQUIRED(MAJOR, MINOR, PATCH) ((LIBCOIN_MAJOR_VERSION>MAJOR) || (LIBCOIN_MAJOR_VERSION==MAJOR && (LIBCOIN_MINOR_VERSION>MINOR || (LIBCOIN_MINOR_VERSION==MINOR && LIBCOIN_PATCH_VERSION>=PATCH))))
+#define COIN_VERSION_LESS_THAN(MAJOR, MINOR, PATCH) ((LIBCOIN_MAJOR_VERSION<MAJOR) || (LIBCOIN_MAJOR_VERSION==MAJOR && (LIBCOIN_MINOR_VERSION<MINOR || (LIBCOIN_MINOR_VERSION==MINOR && LIBCOIN_PATCH_VERSION<PATCH))))
+#define COIN_VERSION_LESS_OR_EQUAL(MAJOR, MINOR, PATCH) ((LIBCOIN_MAJOR_VERSION<MAJOR) || (LIBCOIN_MAJOR_VERSION==MAJOR && (LIBCOIN_MINOR_VERSION<MINOR || (LIBCOIN_MINOR_VERSION==MINOR && LIBCOIN_PATCH_VERSION<=PATCH))))
+#define COIN_VERSION_GREATER_THAN(MAJOR, MINOR, PATCH) ((LIBCOIN_MAJOR_VERSION>MAJOR) || (LIBCOIN_MAJOR_VERSION==MAJOR && (LIBCOIN_MINOR_VERSION>MINOR || (LIBCOIN_MINOR_VERSION==MINOR && LIBCOIN_PATCH_VERSION>PATCH))))
+#define COIN_VERSION_GREATER_OR_EQUAL(MAJOR, MINOR, PATCH) ((LIBCOIN_MAJOR_VERSION>MAJOR) || (LIBCOIN_MAJOR_VERSION==MAJOR && (LIBCOIN_MINOR_VERSION>MINOR || (LIBCOIN_MINOR_VERSION==MINOR && LIBCOIN_PATCH_VERSION>=PATCH))))
+
+
+/**
+  * coinGetVersion() returns the library version number.
+  * Numbering convention : LibCoin-1.0 will return 1.0 from coinGetVersion.
+  *
+  * This C function can be also used to check for the existence of the LibCoin
+  * library using autoconf and its m4 macro AC_CHECK_LIB.
+  *
+  * Here is the code to add to your configure.in:
+ \verbatim
+ #
+ # Check for the LibCoin (COIN) library
+ #
+ AC_CHECK_LIB(coin, coinGetVersion, ,
+    [AC_MSG_ERROR(LibCoin library not found. See http://https://github.com/ceptacle/libcoin/wiki)],)
+ \endverbatim
+*/
+extern COIN_EXPORT const char* coinGetVersion();
+
+/** The coinGetSOVersion() method returns the LibCoin shared object version number. */
+extern COIN_EXPORT const char* coinGetSOVersion();
+
+/** The coinGetLibraryName() method returns the library name in human-friendly form. */
+extern COIN_EXPORT const char* coinGetLibraryName();
+
+}
+
+#endif

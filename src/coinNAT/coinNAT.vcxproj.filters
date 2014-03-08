@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="miniupnpc\connecthostport.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\igd_desc_parse.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minisoap.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minissdpc.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\miniupnpc.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\miniwget.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minixml.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\portlistingparse.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpc.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpcommands.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnperrors.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpreplyparse.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\receivedata.c">
+      <Filter>miniupnpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libnatpmp\getgateway.c">
+      <Filter>libnatpmp</Filter>
+    </ClCompile>
+    <ClCompile Include="libnatpmp\natpmp.c">
+      <Filter>libnatpmp</Filter>
+    </ClCompile>
+    <ClCompile Include="libnatpmp\wingettimeofday.c">
+      <Filter>libnatpmp</Filter>
+    </ClCompile>
+    <ClCompile Include="PortMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="miniupnpc\bsdqueue.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\connecthostport.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\igd_desc_parse.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\minisoap.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\minissdpc.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\miniupnpc.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\miniwget.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\minixml.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\portlistingparse.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\upnpcommands.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\upnperrors.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\upnpreplyparse.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\miniupnpcstrings.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\declspec.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\miniupnpctypes.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\codelength.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="miniupnpc\receivedata.h">
+      <Filter>miniupnpc</Filter>
+    </ClInclude>
+    <ClInclude Include="libnatpmp\getgateway.h">
+      <Filter>libnatpmp</Filter>
+    </ClInclude>
+    <ClInclude Include="libnatpmp\natpmp.h">
+      <Filter>libnatpmp</Filter>
+    </ClInclude>
+    <ClInclude Include="libnatpmp\wingettimeofday.h">
+      <Filter>libnatpmp</Filter>
+    </ClInclude>
+    <ClInclude Include="libnatpmp\declspec.h">
+      <Filter>libnatpmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\coinNAT\Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\coinNAT\PortMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\coin\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\PlatformSpecifics\Windows\libcoinVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{382763B9-72E9-47C6-9E49-AC1EB2866B70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6288F278-5AB5-41BC-B9CA-3E8D526F3B84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="miniupnpc">
+      <UniqueIdentifier>{A928976C-58AC-4C0F-B6F7-6F624AC71C8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libnatpmp">
+      <UniqueIdentifier>{22974EF3-34BA-4008-9820-BD90390AAD87}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

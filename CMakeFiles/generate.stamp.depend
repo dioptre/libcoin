@@ -1,0 +1,41 @@
+# CMake generation dependency list for this directory.
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeLists.txt
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/2.8.12.2/CMakeSystem.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/2.8.12.2/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindThreads.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFiles.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckLibraryExists.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckSymbolExists.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/src/coin/config.in
+E:/expedit/projects/crednexus/src/main/libcoin/src/coin/version.in
+E:/expedit/projects/crednexus/src/main/libcoin/PlatformSpecifics/Windows/libcoinVersionInfo.rc.in
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeModules/Find3rdPartyDependencies.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeModules/FindBDB.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeModules/FindSQLite3.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindBoost.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindOpenSSL.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeModules/LibCoinMacroUtils.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Documentation.cmake
+E:/expedit/projects/crednexus/src/main/libcoin/CMakeModules/cmake_uninstall.cmake.in

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{41F87EC0-F248-40A2-BB10-FE5C571D930A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\expedit\projects\crednexus\src\main\libcoin\include;C:\Program Files (x86)\Oracle\Berkeley DB 4.8.30\include;C:\sqlite;C:\boost\boost_1_54_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\606571a1d30a77bb1fc167f69de64c94\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/generate.stamp.rule;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Documentation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenSSL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeSystem.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\Find3rdPartyDependencies.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindBDB.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindSQLite3.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\LibCoinMacroUtils.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\cmake_uninstall.cmake.in;E:\expedit\projects\crednexus\src\main\libcoin\PlatformSpecifics\Windows\libcoinVersionInfo.rc.in;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\config.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\version.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/generate.stamp.rule;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Documentation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenSSL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeSystem.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\Find3rdPartyDependencies.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindBDB.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindSQLite3.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\LibCoinMacroUtils.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\cmake_uninstall.cmake.in;E:\expedit\projects\crednexus\src\main\libcoin\PlatformSpecifics\Windows\libcoinVersionInfo.rc.in;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\config.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\version.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/generate.stamp.rule;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Documentation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenSSL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeSystem.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\Find3rdPartyDependencies.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindBDB.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindSQLite3.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\LibCoinMacroUtils.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\cmake_uninstall.cmake.in;E:\expedit\projects\crednexus\src\main\libcoin\PlatformSpecifics\Windows\libcoinVersionInfo.rc.in;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\config.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\version.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/expedit/projects/crednexus/src/main/libcoin -BE:/expedit/projects/crednexus/src/main/libcoin --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/generate.stamp.rule;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Documentation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenSSL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\2.8.12.2\CMakeSystem.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\Find3rdPartyDependencies.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindBDB.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\FindSQLite3.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\LibCoinMacroUtils.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\ModuleInstall.cmake;E:\expedit\projects\crednexus\src\main\libcoin\CMakeModules\cmake_uninstall.cmake.in;E:\expedit\projects\crednexus\src\main\libcoin\PlatformSpecifics\Windows\libcoinVersionInfo.rc.in;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\config.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\version.in;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeLists.txt;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinChain\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinHTTP\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinNAT\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinWallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\src\coinPool\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\libcoind\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\coinexplorer\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\applications\cryptoshi\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\simplecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\ponzicoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\examples\extrawallet\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\blocktree\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\claims\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\client\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\extended_key\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\jsonance\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\merkletrie\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\namecoin\CMakeFiles\generate.stamp;E:\expedit\projects\crednexus\src\main\libcoin\tests\sqliterate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\606571a1d30a77bb1fc167f69de64c94\ZERO_CHECK.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\ZERO_CHECK</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\ZERO_CHECK</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\ZERO_CHECK</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/expedit/projects/crednexus/src/main/libcoin/CMakeFiles/606571a1d30a77bb1fc167f69de64c94/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles\ZERO_CHECK</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ZERO_CHECK" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

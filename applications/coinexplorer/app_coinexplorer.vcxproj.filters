@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="coinexplorer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="www\explorer\index.html">
+      <Filter>Document Root\explorer</Filter>
+    </None>
+    <None Include="www\css\demo.css">
+      <Filter>Document Root\css</Filter>
+    </None>
+    <None Include="www\css\demo-print.css">
+      <Filter>Document Root\css</Filter>
+    </None>
+    <None Include="www\js\raphael.js_">
+      <Filter>Document Root\js</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{382763B9-72E9-47C6-9E49-AC1EB2866B70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document Root">
+      <UniqueIdentifier>{6310F6BA-5A9C-436E-A37B-003BEDF51C3A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document Root\explorer">
+      <UniqueIdentifier>{B8AFADCB-326E-4B26-9C8A-38F5C9578587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document Root\css">
+      <UniqueIdentifier>{31ACC8FD-12E7-4188-AF06-D1DB054FF3A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document Root\js">
+      <UniqueIdentifier>{CAE285A6-BA6D-4C58-8052-749BDD50DA39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
