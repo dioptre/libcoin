@@ -28,7 +28,7 @@ class Pool;
 /// Miner is a reference implementation of a Miner. IT IS NOT INTENDED FOR REAL USE!
 /// Miner uses naive hash calculations and is hence suitable for educational and test purposes only.
 
-class Miner : private boost::noncopyable {
+class COINPOOL_EXPORT Miner : private boost::noncopyable {
 public:
     Miner(Pool& pool);
     

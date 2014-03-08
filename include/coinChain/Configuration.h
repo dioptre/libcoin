@@ -24,7 +24,7 @@
 
 typedef std::vector<std::string> strings;
 
-class Configuration {
+class COINCHAIN_EXPORT Configuration {
 public:
     Configuration(int argc, char* argv[], const boost::program_options::options_description& extra);
     const Currency& currency() const {

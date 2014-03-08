@@ -9,7 +9,7 @@
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 # pragma once
 #endif
-
+#include <coinHTTP/Export.h>
 #include "json_spirit_value.h"
 #include <iostream>
 
@@ -21,7 +21,7 @@ namespace json_spirit
     void         write          ( const Value& value, std::ostream&  os );
     void         write_formatted( const Value& value, std::ostream&  os );
     std::string  write          ( const Value& value );
-    std::string  write_formatted( const Value& value );
+    COINHTTP_EXPORT std::string  write_formatted( const Value& value );
 
 #ifndef BOOST_NO_STD_WSTRING
 

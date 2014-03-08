@@ -16,7 +16,7 @@ public:
     virtual void mark_used(const Script&) {}
 };
 
-class StaticPayee : public Payee {
+class COIN_EXPORT StaticPayee : public Payee {
 public:
     StaticPayee(const PubKeyHash& pkh) : _pkh(pkh) { }
     virtual Script current_script();
