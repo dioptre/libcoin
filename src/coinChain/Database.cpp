@@ -40,6 +40,8 @@ namespace sqliterate {
             throw Database::Error("StatementBase::bind(text) : error " + lexical_cast<string>(ret) + " binding a value");
     }
     void StatementBase::bind(const blob& arg, int col) const {
+		if (arg.size() == 0)
+			return;
         int ret = sqlite3_bind_blob(_->stmt, col, (const char*)&arg.front(), arg.size(), SQLITE_TRANSIENT);
         if (ret != SQLITE_OK)
             throw Database::Error("StatementBase::bind(blob) : error " + lexical_cast<string>(ret) + " binding a value");

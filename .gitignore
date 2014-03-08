@@ -26,3 +26,6 @@ UnusableNodes*.xml
 *libs/
 *.sdf
 *.dir/
+Debug/
+Release/
+*.opensdf
