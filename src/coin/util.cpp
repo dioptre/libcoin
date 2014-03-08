@@ -291,7 +291,7 @@ int my_snprintf(char* buffer, size_t limit, const char* format, ...)
 }
 
 
-string strprintf(const char* format, ...)
+std::string strprintf(const char* format, ...)
 {
     char buffer[50000];
     char* p = buffer;

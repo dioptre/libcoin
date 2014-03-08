@@ -31,8 +31,8 @@
 // - Doubleclicking selects the whole number as one word if it's all alphanumeric.
 
 /// Utility functions
-std::string EncodeBase58Check(const std::vector<unsigned char>& vchIn, const char* alphabet = NULL);
-bool DecodeBase58Check(const std::string& str, std::vector<unsigned char>& vchRet, const char* alphabet = NULL);
+COIN_EXPORT std::string EncodeBase58Check(const std::vector<unsigned char>& vchIn, const char* alphabet = NULL);
+COIN_EXPORT bool DecodeBase58Check(const std::string& str, std::vector<unsigned char>& vchRet, const char* alphabet = NULL);
 
 
 

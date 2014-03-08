@@ -34,6 +34,31 @@ const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
 #include <string.h>
 #include <openssl/sha.h>
 
+#ifndef COIN_EXPORT
+	#if defined(_MSC_VER) || defined(__CYGWIN__) || defined(__MINGW32__) || defined( __BCPLUSPLUS__)  || defined( __MWERKS__)
+		#  if defined( COIN_LIBRARY_STATIC )
+		#    define COIN_EXPORT
+		#  elif defined( COIN_LIBRARY )
+		#    define COIN_EXPORT  __declspec(dllexport)
+		#  else
+		#    define COIN_EXPORT  __declspec(dllimport)
+		#  endif
+	#else
+		#  define COIN_EXPORT
+	#endif
+#endif
+
+#ifdef __cplusplus
+
+
+#endif
+    
+    
+#ifdef __cplusplus
+
+#endif
+
+
 static __inline uint32_t be32dec(const void *pp)
 {
 	const uint8_t *p = (uint8_t const *)pp;
@@ -261,7 +286,7 @@ static __inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
 	B[15] += x15;
 }
 
-void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad)
+COIN_EXPORT void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad)
 {
 	uint8_t B[128];
 	uint32_t X[32];
@@ -294,7 +319,7 @@ void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad)
 	PBKDF2_SHA256((const uint8_t *)input, 80, B, 128, 1, (uint8_t *)output, 32);
 }
 
-void scrypt_1024_1_1_256(const char *input, char *output)
+COIN_EXPORT void scrypt_1024_1_1_256(const char *input, char *output)
 {
 	char* scratchpad = (char*)malloc(SCRYPT_SCRATCHPAD_SIZE*sizeof(char));
 	scrypt_1024_1_1_256_sp(input, output, scratchpad);

@@ -203,9 +203,9 @@ public:
             return _trunk[h];
     }
 
-    const int distance(const Iterator& a, const Iterator& b) const {
+    /*const int distance(const Iterator& a, const Iterator& b) const {
         
-    }
+    }*/
     
     void advance(Iterator& i, int n) const {
         if (i == end()) return;

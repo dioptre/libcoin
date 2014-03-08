@@ -706,7 +706,7 @@ boost::tribool Evaluator::eval(opcodetype opcode) {
 }
 
 
-bool Solver(const Script& scriptPubKey, vector<pair<opcodetype, valtype> >& vSolutionRet)
+COIN_EXPORT bool Solver(const Script& scriptPubKey, vector<pair<opcodetype, valtype> >& vSolutionRet)
 {
     // Templates
     static vector<Script> vTemplates;

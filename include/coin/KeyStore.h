@@ -10,7 +10,7 @@
 #include <coin/Key.h>
 
 /// Payee is an interface to a generalized payee, the receiver of money. The payee can choose the generate a new script for each payment, to reuse a single script over and over again, or even to e.g. to use a deterministic wallet to generate a group of public keys.
-class Payee {
+class COIN_EXPORT Payee {
 public:
     virtual Script current_script() = 0;
     virtual void mark_used(const Script&) {}
@@ -26,7 +26,7 @@ private:
 
 /// KeyStore is a virtual base class for key stores. It enables mappings between PubKeyHashes and ScriptHashes, whether, all
 /// "Bitcoin" address specific stuff are kept in derived classes.
-class KeyStore {
+class COIN_EXPORT KeyStore {
 public:
     // Add a key to the store.
     virtual bool addKey(const CKey& key) = 0;
@@ -57,7 +57,7 @@ typedef std::map<PubKeyHash, std::pair<CSecret, bool> > KeyMap;
 typedef std::map<ScriptHash, Script> ScriptMap;
 
 // Basic key store, that keeps keys in an address->secret map
-class BasicKeyStore : public KeyStore {
+class COIN_EXPORT BasicKeyStore : public KeyStore {
 protected:
     KeyMap _keys;
     ScriptMap _scripts;
@@ -92,16 +92,16 @@ public:
     virtual bool getScript(const ScriptHash& hash, Script& redeemScriptOut) const;
 };
 
-bool IsMine(const KeyStore& keystore, const Script& scriptPubKey);
+COIN_EXPORT bool IsMine(const KeyStore& keystore, const Script& scriptPubKey);
 
-bool SignSignature(const KeyStore &keystore, const Output& txout, Transaction& txTo, unsigned int nIn, int nHashType=SIGHASH_ALL);
-bool SignSignature(const KeyStore& keystore, const Transaction& txFrom, Transaction& txTo, unsigned int nIn, int nHashType=SIGHASH_ALL);
+COIN_EXPORT bool SignSignature(const KeyStore &keystore, const Output& txout, Transaction& txTo, unsigned int nIn, int nHashType=SIGHASH_ALL);
+COIN_EXPORT bool SignSignature(const KeyStore& keystore, const Transaction& txFrom, Transaction& txTo, unsigned int nIn, int nHashType=SIGHASH_ALL);
 
-bool Solver(const Script& scriptPubKey, std::vector<std::pair<opcodetype, std::vector<unsigned char> > >& vSolutionRet);
+COIN_EXPORT bool Solver(const Script& scriptPubKey, std::vector<std::pair<opcodetype, std::vector<unsigned char> > >& vSolutionRet);
 
-bool ExtractAddress(const Script& scriptPubKey, PubKeyHash& pubKeyHash, ScriptHash& scriptHash);
+COIN_EXPORT bool ExtractAddress(const Script& scriptPubKey, PubKeyHash& pubKeyHash, ScriptHash& scriptHash);
 
-bool ExtractAddresses(const Script& scriptPubKey, txnouttype& typeRet, std::vector<PubKeyHash>& addressRet, int& nRequiredRet);
+COIN_EXPORT bool ExtractAddresses(const Script& scriptPubKey, txnouttype& typeRet, std::vector<PubKeyHash>& addressRet, int& nRequiredRet);
 
 
 #endif

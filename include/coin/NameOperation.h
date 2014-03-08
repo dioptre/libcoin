@@ -31,7 +31,7 @@
 
 static const int MIN_FIRSTUPDATE_DEPTH = 12;
 
-class NameOperation {
+class COIN_EXPORT NameOperation {
 public:
     enum {
         // definitions for namecoin

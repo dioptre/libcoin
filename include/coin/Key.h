@@ -5,6 +5,7 @@
 #ifndef LIBCOIN_KEY_H
 #define LIBCOIN_KEY_H
 
+#include <coin/Export.h>
 #include <stdexcept>
 #include <vector>
 
@@ -41,7 +42,7 @@
 // see www.keylength.com
 // script supports up to 75 for single byte push
 
-int extern EC_KEY_regenerate_key(EC_KEY *eckey, BIGNUM *priv_key);
+COIN_EXPORT int extern EC_KEY_regenerate_key(EC_KEY *eckey, BIGNUM *priv_key);
 int extern ECDSA_SIG_recover_key_GFp(EC_KEY *eckey, ECDSA_SIG *ecsig, const unsigned char *msg, int msglen, int recid, int check);
 
 class key_error : public std::runtime_error

@@ -137,50 +137,50 @@ munlock(((void *)(((size_t)(a)) & (~((PAGESIZE)-1)))),\
 
 //extern std::map<std::string, std::string> mapArgs;
 //extern std::map<std::string, std::vector<std::string> > mapMultiArgs;
-extern bool fDebug;
+COIN_EXPORT extern bool fDebug;
 extern bool fPrintToConsole;
 extern bool fPrintToDebugger;
 extern std::string logfile;
-extern char pszSetDataDir[MAX_PATH];
+COIN_EXPORT extern char pszSetDataDir[MAX_PATH];
 extern bool fDaemon;
 extern std::string strMiscWarning;
 
 extern bool fLogTimestamps;
 
-void RandAddSeed();
-void RandAddSeedPerfmon();
-int OutputDebugStringF(const char* pszFormat, ...);
-int my_snprintf(char* buffer, size_t limit, const char* format, ...);
-std::string strprintf(const char* format, ...);
-bool error(const char* format, ...);
-void LogException(std::exception* pex, const char* pszThread);
-void PrintException(std::exception* pex, const char* pszThread);
-void PrintExceptionContinue(std::exception* pex, const char* pszThread);
-//void ParseString(const std::string& str, char c, std::vector<std::string>& v);
-std::string FormatMoney(int64_t n, bool fPlus=false);
-//bool ParseMoney(const std::string& str, int64_t& nRet);
-//bool ParseMoney(const char* pszIn, int64_t& nRet);
-std::vector<unsigned char> ParseHex(const char* psz);
-std::vector<unsigned char> ParseHex(const std::string& str);
-const char* wxGetTranslation(const char* psz);
-int GetFilesize(FILE* file);
-std::string GetPidFile();
+COIN_EXPORT void RandAddSeed();
+COIN_EXPORT void RandAddSeedPerfmon();
+COIN_EXPORT int OutputDebugStringF(const char* pszFormat, ...);
+COIN_EXPORT int my_snprintf(char* buffer, size_t limit, const char* format, ...);
+COIN_EXPORT std::string strprintf(const char* format, ...);
+COIN_EXPORT bool error(const char* format, ...);
+COIN_EXPORT void LogException(std::exception* pex, const char* pszThread);
+COIN_EXPORT void PrintException(std::exception* pex, const char* pszThread);
+COIN_EXPORT void PrintExceptionContinue(std::exception* pex, const char* pszThread);
+//COIN_EXPORT void ParseString(const std::string& str, char c, std::vector<std::string>& v);
+COIN_EXPORT std::string FormatMoney(int64_t n, bool fPlus=false);
+//COIN_EXPORT bool ParseMoney(const std::string& str, int64_t& nRet);
+//COIN_EXPORT bool ParseMoney(const char* pszIn, int64_t& nRet);
+COIN_EXPORT std::vector<unsigned char> ParseHex(const char* psz);
+COIN_EXPORT std::vector<unsigned char> ParseHex(const std::string& str);
+COIN_EXPORT const char* wxGetTranslation(const char* psz);
+COIN_EXPORT int GetFilesize(FILE* file);
+COIN_EXPORT std::string GetPidFile();
 
 #ifdef _WIN32
-std::string MyGetSpecialFolderPath(int nFolder, bool fCreate);
+COIN_EXPORT std::string MyGetSpecialFolderPath(int nFolder, bool fCreate);
 #endif
-//std::string GetDefaultDataDir();
-//std::string GetDataDir();
-void ShrinkDebugFile();
-int GetRandInt(int nMax);
-uint64_t GetRand(uint64_t nMax);
+//COIN_EXPORT std::string GetDefaultDataDir();
+//COIN_EXPORT std::string GetDataDir();
+COIN_EXPORT void ShrinkDebugFile();
+COIN_EXPORT int GetRandInt(int nMax);
+COIN_EXPORT uint64_t GetRand(uint64_t nMax);
 
-int64_t GetAdjustedTime();
-void AddTimeData(unsigned int ip, int64_t nTime);
-std::string FormatVersion(int nVersion);
+COIN_EXPORT int64_t GetAdjustedTime();
+COIN_EXPORT void AddTimeData(unsigned int ip, int64_t nTime);
+COIN_EXPORT std::string FormatVersion(int nVersion);
 
 
-std::string default_data_dir(std::string suffix);
+COIN_EXPORT std::string default_data_dir(std::string suffix);
 
 
 template <typename T>
@@ -203,10 +203,10 @@ std::string hexify(const std::vector<T>& t) {
     return ss.str();
 }
 
-long hex2long(const char* hexString);
+COIN_EXPORT long hex2long(const char* hexString);
 
 // Wrapper to automatically initialize mutex
-class CCriticalSection
+class COIN_EXPORT CCriticalSection
 {
 protected:
     boost::interprocess::interprocess_recursive_mutex mutex;
@@ -739,13 +739,13 @@ public:
 #ifdef __cplusplus
 extern "C" {
 #endif
-    void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad);
-    void scrypt_1024_1_1_256(const char *input, char *output);
+    COIN_EXPORT void scrypt_1024_1_1_256_sp(const char *input, char *output, char *scratchpad);
+    COIN_EXPORT void scrypt_1024_1_1_256(const char *input, char *output);
 #ifdef __cplusplus
 }
 #endif
 
 
-size_t getMemorySize();
+COIN_EXPORT size_t getMemorySize();
 
 #endif

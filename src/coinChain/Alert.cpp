@@ -22,6 +22,7 @@
 #include <coin/Key.h>
 #include <coin/Logger.h>
 
+
 #include "boost/foreach.hpp"
 
 using namespace std;
@@ -32,16 +33,18 @@ using namespace boost;
 //
 // Alert
 //
+extern std::string strprintf(const char* format, ...);
 
-string UnsignedAlert::toString() const
+std::string UnsignedAlert::toString() const
 {
+	return "\0";
     std::string cancels;
     BOOST_FOREACH(int n, _cancels)
-    cancels += strprintf("%d ", n);
+    cancels += ::strprintf("%d ", n);
     std::string subversions;
     BOOST_FOREACH(std::string str, _subversions)
     subversions += "\"" + str + "\" ";
-    return strprintf(
+    return ::strprintf(
                      "Alert(\n"
                      "    nVersion     = %d\n"
                      "    nRelayUntil  = %"PRI64d"\n"

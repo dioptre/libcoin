@@ -390,8 +390,8 @@ public:
     explicit PubKeyHash(const std::vector<unsigned char>& vch) : uint160(vch) {}
 };
 
-PubKeyHash toPubKeyHash(const PubKey& pubkey);
-PubKeyHash toPubKeyHash(const std::string& str);
+COIN_EXPORT PubKeyHash toPubKeyHash(const PubKey& pubkey);
+COIN_EXPORT PubKeyHash toPubKeyHash(const std::string& str);
 
 class COIN_EXPORT ScriptHash : public uint160 {
 public:
@@ -413,7 +413,7 @@ public:
 };
 
 class Script;
-ScriptHash toScriptHash(const Script& script);
+COIN_EXPORT ScriptHash toScriptHash(const Script& script);
 
 
 class Script : public std::vector<unsigned char>

@@ -21,7 +21,7 @@ enum {
     BLOCK_VERSION_CHAIN_END      = (1 << 30),
 };
 
-class AuxPow : public MerkleTx {
+class COIN_EXPORT AuxPow : public MerkleTx {
 public:
     AuxPow(const Transaction& txn) : MerkleTx(txn) {
     }
