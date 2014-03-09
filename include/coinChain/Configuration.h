@@ -104,7 +104,9 @@ public:
     bool searchable() const {
         return _searchable;
     }
-    friend std::ostream& operator<<(std::ostream& os, const Configuration&);
+    friend 	std::ostream& operator<<(std::ostream& os, const Configuration& conf) {
+		return os << conf._visible;
+	}
 private:
     boost::program_options::options_description _visible;
     std::string _config_file;
@@ -125,8 +127,6 @@ private:
     std::ofstream _olog;
 };
 
-std::ostream& operator<<(std::ostream& os, const Configuration& conf) {
-    return os << conf._visible;
-}
+
 
 #endif // CONFIGURATION_H

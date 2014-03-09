@@ -36,8 +36,14 @@
 
 #include <boost/thread.hpp>
 #include <boost/algorithm/string/split.hpp>
+#include <winsock2.h>
 
 #include <fstream>
+
+#ifndef BOOST_SYSTEM_NO_DEPRECATED
+#define BOOST_SYSTEM_NO_DEPRECATED 1
+#endif
+#include <boost/asio.hpp>
 
 using namespace std;
 using namespace boost;

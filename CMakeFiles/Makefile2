@@ -184,8 +184,8 @@ src/coinChain/preinstall:
 # Target rules for target src/coinChain/CMakeFiles/coinChain.dir
 
 # All Build rule for target.
-src/coinChain/CMakeFiles/coinChain.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 src/coinChain/CMakeFiles/coinChain.dir/all: src/coin/CMakeFiles/coin.dir/all
+src/coinChain/CMakeFiles/coinChain.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f src\coinChain\CMakeFiles\coinChain.dir\build.make src/coinChain/CMakeFiles/coinChain.dir/depend
 	$(MAKE) -f src\coinChain\CMakeFiles\coinChain.dir\build.make src/coinChain/CMakeFiles/coinChain.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44
@@ -285,9 +285,9 @@ src/coinNAT/preinstall:
 # Target rules for target src/coinNAT/CMakeFiles/coinNAT.dir
 
 # All Build rule for target.
-src/coinNAT/CMakeFiles/coinNAT.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-src/coinNAT/CMakeFiles/coinNAT.dir/all: src/coin/CMakeFiles/coin.dir/all
 src/coinNAT/CMakeFiles/coinNAT.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+src/coinNAT/CMakeFiles/coinNAT.dir/all: src/coin/CMakeFiles/coin.dir/all
+src/coinNAT/CMakeFiles/coinNAT.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f src\coinNAT\CMakeFiles\coinNAT.dir\build.make src/coinNAT/CMakeFiles/coinNAT.dir/depend
 	$(MAKE) -f src\coinNAT\CMakeFiles\coinNAT.dir\build.make src/coinNAT/CMakeFiles/coinNAT.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
@@ -337,9 +337,9 @@ src/coinWallet/preinstall:
 # Target rules for target src/coinWallet/CMakeFiles/coinWallet.dir
 
 # All Build rule for target.
-src/coinWallet/CMakeFiles/coinWallet.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-src/coinWallet/CMakeFiles/coinWallet.dir/all: src/coin/CMakeFiles/coin.dir/all
 src/coinWallet/CMakeFiles/coinWallet.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+src/coinWallet/CMakeFiles/coinWallet.dir/all: src/coin/CMakeFiles/coin.dir/all
+src/coinWallet/CMakeFiles/coinWallet.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f src\coinWallet\CMakeFiles\coinWallet.dir\build.make src/coinWallet/CMakeFiles/coinWallet.dir/depend
 	$(MAKE) -f src\coinWallet\CMakeFiles\coinWallet.dir\build.make src/coinWallet/CMakeFiles/coinWallet.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  81 82 83 84 85 86 87 88
@@ -389,10 +389,10 @@ src/coinPool/preinstall:
 # Target rules for target src/coinPool/CMakeFiles/coinPool.dir
 
 # All Build rule for target.
+src/coinPool/CMakeFiles/coinPool.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+src/coinPool/CMakeFiles/coinPool.dir/all: src/coin/CMakeFiles/coin.dir/all
 src/coinPool/CMakeFiles/coinPool.dir/all: src/coinWallet/CMakeFiles/coinWallet.dir/all
 src/coinPool/CMakeFiles/coinPool.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-src/coinPool/CMakeFiles/coinPool.dir/all: src/coin/CMakeFiles/coin.dir/all
-src/coinPool/CMakeFiles/coinPool.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f src\coinPool\CMakeFiles\coinPool.dir\build.make src/coinPool/CMakeFiles/coinPool.dir/depend
 	$(MAKE) -f src\coinPool\CMakeFiles\coinPool.dir\build.make src/coinPool/CMakeFiles/coinPool.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  76 77 78 79 80
@@ -463,12 +463,12 @@ applications/libcoind/preinstall:
 # Target rules for target applications/libcoind/CMakeFiles/app_libcoind.dir
 
 # All Build rule for target.
-applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinNAT/CMakeFiles/coinNAT.dir/all
+applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coin/CMakeFiles/coin.dir/all
 applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinWallet/CMakeFiles/coinWallet.dir/all
 applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinPool/CMakeFiles/coinPool.dir/all
+applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinNAT/CMakeFiles/coinNAT.dir/all
 applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coin/CMakeFiles/coin.dir/all
-applications/libcoind/CMakeFiles/app_libcoind.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f applications\libcoind\CMakeFiles\app_libcoind.dir\build.make applications/libcoind/CMakeFiles/app_libcoind.dir/depend
 	$(MAKE) -f applications\libcoind\CMakeFiles\app_libcoind.dir\build.make applications/libcoind/CMakeFiles/app_libcoind.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  3
@@ -518,10 +518,10 @@ applications/coinexplorer/preinstall:
 # Target rules for target applications/coinexplorer/CMakeFiles/app_coinexplorer.dir
 
 # All Build rule for target.
+applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coin/CMakeFiles/coin.dir/all
 applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coinNAT/CMakeFiles/coinNAT.dir/all
 applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coin/CMakeFiles/coin.dir/all
-applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f applications\coinexplorer\CMakeFiles\app_coinexplorer.dir\build.make applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/depend
 	$(MAKE) -f applications\coinexplorer\CMakeFiles\app_coinexplorer.dir\build.make applications/coinexplorer/CMakeFiles/app_coinexplorer.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  1
@@ -571,9 +571,9 @@ applications/cryptoshi/preinstall:
 # Target rules for target applications/cryptoshi/CMakeFiles/app_cryptoshi.dir
 
 # All Build rule for target.
-applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/all: src/coin/CMakeFiles/coin.dir/all
 applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/all: src/coin/CMakeFiles/coin.dir/all
+applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f applications\cryptoshi\CMakeFiles\app_cryptoshi.dir\build.make applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/depend
 	$(MAKE) -f applications\cryptoshi\CMakeFiles\app_cryptoshi.dir\build.make applications/cryptoshi/CMakeFiles/app_cryptoshi.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  2
@@ -644,10 +644,10 @@ examples/simplecoin/preinstall:
 # Target rules for target examples/simplecoin/CMakeFiles/example_simplecoin.dir
 
 # All Build rule for target.
+examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coin/CMakeFiles/coin.dir/all
 examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coinWallet/CMakeFiles/coinWallet.dir/all
 examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coin/CMakeFiles/coin.dir/all
-examples/simplecoin/CMakeFiles/example_simplecoin.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f examples\simplecoin\CMakeFiles\example_simplecoin.dir\build.make examples/simplecoin/CMakeFiles/example_simplecoin.dir/depend
 	$(MAKE) -f examples\simplecoin\CMakeFiles\example_simplecoin.dir\build.make examples/simplecoin/CMakeFiles/example_simplecoin.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  91
@@ -697,11 +697,11 @@ examples/ponzicoin/preinstall:
 # Target rules for target examples/ponzicoin/CMakeFiles/example_ponzicoin.dir
 
 # All Build rule for target.
+examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coin/CMakeFiles/coin.dir/all
 examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coinWallet/CMakeFiles/coinWallet.dir/all
 examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coinPool/CMakeFiles/coinPool.dir/all
 examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coin/CMakeFiles/coin.dir/all
-examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f examples\ponzicoin\CMakeFiles\example_ponzicoin.dir\build.make examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/depend
 	$(MAKE) -f examples\ponzicoin\CMakeFiles\example_ponzicoin.dir\build.make examples/ponzicoin/CMakeFiles/example_ponzicoin.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  90
@@ -751,10 +751,10 @@ examples/extrawallet/preinstall:
 # Target rules for target examples/extrawallet/CMakeFiles/example_extrawallet.dir
 
 # All Build rule for target.
+examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coin/CMakeFiles/coin.dir/all
 examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coinWallet/CMakeFiles/coinWallet.dir/all
 examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coin/CMakeFiles/coin.dir/all
-examples/extrawallet/CMakeFiles/example_extrawallet.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
 	$(MAKE) -f examples\extrawallet\CMakeFiles\example_extrawallet.dir\build.make examples/extrawallet/CMakeFiles/example_extrawallet.dir/depend
 	$(MAKE) -f examples\extrawallet\CMakeFiles\example_extrawallet.dir\build.make examples/extrawallet/CMakeFiles/example_extrawallet.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  89
@@ -840,9 +840,9 @@ tests/blocktree/preinstall:
 # Target rules for target tests/blocktree/CMakeFiles/test_blocktree.dir
 
 # All Build rule for target.
-tests/blocktree/CMakeFiles/test_blocktree.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/blocktree/CMakeFiles/test_blocktree.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/blocktree/CMakeFiles/test_blocktree.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/blocktree/CMakeFiles/test_blocktree.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/blocktree/CMakeFiles/test_blocktree.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\blocktree\CMakeFiles\test_blocktree.dir\build.make tests/blocktree/CMakeFiles/test_blocktree.dir/depend
 	$(MAKE) -f tests\blocktree\CMakeFiles\test_blocktree.dir\build.make tests/blocktree/CMakeFiles/test_blocktree.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  92
@@ -892,9 +892,9 @@ tests/claims/preinstall:
 # Target rules for target tests/claims/CMakeFiles/test_claims.dir
 
 # All Build rule for target.
-tests/claims/CMakeFiles/test_claims.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/claims/CMakeFiles/test_claims.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/claims/CMakeFiles/test_claims.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/claims/CMakeFiles/test_claims.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/claims/CMakeFiles/test_claims.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\claims\CMakeFiles\test_claims.dir\build.make tests/claims/CMakeFiles/test_claims.dir/depend
 	$(MAKE) -f tests\claims\CMakeFiles\test_claims.dir\build.make tests/claims/CMakeFiles/test_claims.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  93
@@ -944,9 +944,9 @@ tests/client/preinstall:
 # Target rules for target tests/client/CMakeFiles/test_client.dir
 
 # All Build rule for target.
-tests/client/CMakeFiles/test_client.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/client/CMakeFiles/test_client.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/client/CMakeFiles/test_client.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/client/CMakeFiles/test_client.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/client/CMakeFiles/test_client.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\client\CMakeFiles\test_client.dir\build.make tests/client/CMakeFiles/test_client.dir/depend
 	$(MAKE) -f tests\client\CMakeFiles\test_client.dir\build.make tests/client/CMakeFiles/test_client.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  94
@@ -996,9 +996,9 @@ tests/extended_key/preinstall:
 # Target rules for target tests/extended_key/CMakeFiles/test_extended_key.dir
 
 # All Build rule for target.
-tests/extended_key/CMakeFiles/test_extended_key.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/extended_key/CMakeFiles/test_extended_key.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/extended_key/CMakeFiles/test_extended_key.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/extended_key/CMakeFiles/test_extended_key.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/extended_key/CMakeFiles/test_extended_key.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\extended_key\CMakeFiles\test_extended_key.dir\build.make tests/extended_key/CMakeFiles/test_extended_key.dir/depend
 	$(MAKE) -f tests\extended_key\CMakeFiles\test_extended_key.dir\build.make tests/extended_key/CMakeFiles/test_extended_key.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  95
@@ -1048,9 +1048,9 @@ tests/jsonance/preinstall:
 # Target rules for target tests/jsonance/CMakeFiles/test_jsonance.dir
 
 # All Build rule for target.
-tests/jsonance/CMakeFiles/test_jsonance.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/jsonance/CMakeFiles/test_jsonance.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/jsonance/CMakeFiles/test_jsonance.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/jsonance/CMakeFiles/test_jsonance.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/jsonance/CMakeFiles/test_jsonance.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\jsonance\CMakeFiles\test_jsonance.dir\build.make tests/jsonance/CMakeFiles/test_jsonance.dir/depend
 	$(MAKE) -f tests\jsonance\CMakeFiles\test_jsonance.dir\build.make tests/jsonance/CMakeFiles/test_jsonance.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  96
@@ -1100,9 +1100,9 @@ tests/merkletrie/preinstall:
 # Target rules for target tests/merkletrie/CMakeFiles/test_merkletrie.dir
 
 # All Build rule for target.
-tests/merkletrie/CMakeFiles/test_merkletrie.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/merkletrie/CMakeFiles/test_merkletrie.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/merkletrie/CMakeFiles/test_merkletrie.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/merkletrie/CMakeFiles/test_merkletrie.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/merkletrie/CMakeFiles/test_merkletrie.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\merkletrie\CMakeFiles\test_merkletrie.dir\build.make tests/merkletrie/CMakeFiles/test_merkletrie.dir/depend
 	$(MAKE) -f tests\merkletrie\CMakeFiles\test_merkletrie.dir\build.make tests/merkletrie/CMakeFiles/test_merkletrie.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  97
@@ -1152,9 +1152,9 @@ tests/namecoin/preinstall:
 # Target rules for target tests/namecoin/CMakeFiles/test_namecoin.dir
 
 # All Build rule for target.
-tests/namecoin/CMakeFiles/test_namecoin.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/namecoin/CMakeFiles/test_namecoin.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/namecoin/CMakeFiles/test_namecoin.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/namecoin/CMakeFiles/test_namecoin.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/namecoin/CMakeFiles/test_namecoin.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\namecoin\CMakeFiles\test_namecoin.dir\build.make tests/namecoin/CMakeFiles/test_namecoin.dir/depend
 	$(MAKE) -f tests\namecoin\CMakeFiles\test_namecoin.dir\build.make tests/namecoin/CMakeFiles/test_namecoin.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  98
@@ -1204,9 +1204,9 @@ tests/sqliterate/preinstall:
 # Target rules for target tests/sqliterate/CMakeFiles/test_sqliterate.dir
 
 # All Build rule for target.
-tests/sqliterate/CMakeFiles/test_sqliterate.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
-tests/sqliterate/CMakeFiles/test_sqliterate.dir/all: src/coin/CMakeFiles/coin.dir/all
 tests/sqliterate/CMakeFiles/test_sqliterate.dir/all: src/coinChain/CMakeFiles/coinChain.dir/all
+tests/sqliterate/CMakeFiles/test_sqliterate.dir/all: src/coin/CMakeFiles/coin.dir/all
+tests/sqliterate/CMakeFiles/test_sqliterate.dir/all: src/coinHTTP/CMakeFiles/coinHTTP.dir/all
 	$(MAKE) -f tests\sqliterate\CMakeFiles\test_sqliterate.dir\build.make tests/sqliterate/CMakeFiles/test_sqliterate.dir/depend
 	$(MAKE) -f tests\sqliterate\CMakeFiles\test_sqliterate.dir\build.make tests/sqliterate/CMakeFiles/test_sqliterate.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report E:\expedit\projects\crednexus\src\main\libcoin\CMakeFiles  99

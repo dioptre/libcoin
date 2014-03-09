@@ -24,7 +24,7 @@ BDB_INCLUDE_DIR:PATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/db-4.8
 BDB_LIBRARY:FILEPATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/db-4.8.30.NC/build_unix/.libs/libdb_cxx-4.8.a
 
 //Path to a library.
-BDB_LIBRARY_DEBUG:FILEPATH=BDB_LIBRARY_DEBUG-NOTFOUND
+BDB_LIBRARY_DEBUG:FILEPATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/db-4.8.30.NC/build_unix/.libs/libdb_cxx-4.8.a
 
 //Build coind - not released yet...
 BUILD_COIND:BOOL=OFF
@@ -115,7 +115,7 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 CMAKE_CXX_COMPILER:FILEPATH=C:/MinGW/bin/g++.exe
 
 //Flags used by the compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=-IE:/expedit/projects/crednexus/src/main/namecoin/libs/openssl-1.0.1e/include -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -DCOIN_LIBRARY_STATIC -DCOINCHAIN_LIBRARY_STATIC -DCOINHTTP_LIBRARY_STATIC -DCOINMINE_LIBRARY_STATIC -DCOINNAT_LIBRARY_STATIC -DCOINPOOL_LIBRARY_STATIC -DCOINSTAT_LIBRARY_STATIC -DCOINWALLET_LIBRARY_STATIC
+CMAKE_CXX_FLAGS:STRING=-IE:/expedit/projects/crednexus/src/main/namecoin/libs/openssl-1.0.1e/include -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -DCOIN_LIBRARY_STATIC -DCOINCHAIN_LIBRARY_STATIC -DCOINHTTP_LIBRARY_STATIC -DCOINMINE_LIBRARY_STATIC -DCOINNAT_LIBRARY_STATIC -DCOINPOOL_LIBRARY_STATIC -DCOINSTAT_LIBRARY_STATIC -DCOINWALLET_LIBRARY_STATIC -mthreads
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -132,7 +132,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by defalut with all C++ applications.
-CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+CMAKE_CXX_STANDARD_LIBRARIES:STRING=-liphlpapi -lws2_32 -lmswsock -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //C compiler.
 CMAKE_C_COMPILER:FILEPATH=C:/MinGW/bin/gcc.exe
@@ -155,13 +155,13 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by defalut with all C applications.
-CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+CMAKE_C_STANDARD_LIBRARIES:STRING=-liphlpapi -lws2_32 -lmswsock -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //add a postfix, usually d on windows
 CMAKE_DEBUG_POSTFIX:STRING=d
 
 //Flags used by the linker.
-CMAKE_EXE_LINKER_FLAGS:STRING=-liphlpapi -lws2_32 --verbose
+CMAKE_EXE_LINKER_FLAGS:STRING=--verbose -Wl,--enable-stdcall-fixup
 
 //Flags used by the linker during debug builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
@@ -199,7 +199,7 @@ CMAKE_MAKE_PROGRAM:FILEPATH=C:/MinGW/bin/mingw32-make.exe
 CMAKE_MINSIZEREL_POSTFIX:STRING=s
 
 //Flags used by the linker during the creation of modules.
-CMAKE_MODULE_LINKER_FLAGS:STRING=' '
+CMAKE_MODULE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during debug builds.
 CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
@@ -248,7 +248,7 @@ CMAKE_RELWITHDEBINFO_POSTFIX:STRING=rd
 CMAKE_SH:FILEPATH=c:/cygwin64/bin/sh.exe
 
 //Flags used by the linker during the creation of dll's.
-CMAKE_SHARED_LINKER_FLAGS:STRING=-IE:/expedit/projects/crednexus/src/main/namecoin/libs/openssl-1.0.1e/include E:\expedit\projects\crednexus\src\main\3rdparty\libssl.a E:\expedit\projects\crednexus\src\main\3rdparty\libcrypto.a --verbose -Wl,--no-undefined -Wl,--enable-runtime-pseudo-reloc -Wl,--out-implib,libobjects.a
+CMAKE_SHARED_LINKER_FLAGS:STRING=-IE:/expedit/projects/crednexus/src/main/namecoin/libs/openssl-1.0.1e/include E:\expedit\projects\crednexus\src\main\3rdparty\libssl.a E:\expedit\projects\crednexus\src\main\3rdparty\libcrypto.a --verbose -Wl,--enable-stdcall-fixup -Wl,--no-undefined -Wl,--enable-runtime-pseudo-reloc -Wl,--out-implib,libobjects.a
 
 //Flags used by the linker during debug builds.
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
@@ -360,7 +360,7 @@ SQLITE3_LIBRARY:FILEPATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/sq
 SQLITE3_LIBRARY_DEBUG:FILEPATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/sqlite-3.8.3.1/sqlite3.a
 
 //Path to a library.
-SQLITE3_LIBRARY_RELEASE:FILEPATH=SQLITE3_LIBRARY_RELEASE-NOTFOUND
+SQLITE3_LIBRARY_RELEASE:FILEPATH=E:/expedit/projects/crednexus/src/main/namecoin/libs/sqlite-3.8.3.1/sqlite3.a
 
 //Path to a library.
 SSL_EAY:FILEPATH=
