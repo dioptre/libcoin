@@ -17,6 +17,7 @@
 #define MIN(x,y) (((x)<(y))?(x):(y))
 #define snprintf _snprintf
 #define socklen_t int
+
 #ifndef strncasecmp
 #if defined(_MSC_VER) && (_MSC_VER >= 1400)
 #define strncasecmp _memicmp
@@ -49,6 +50,10 @@
 #include "connecthostport.h"
 #include "receivedata.h"
 
+
+extern __stdcall int getnameinfo(const struct sockaddr *restrictsa, socklen_t salen,
+       char *restrictnode, socklen_t nodelen, char *restrictservice,
+       socklen_t servicelen, int flags);
 /*
  * Read a HTTP response from a socket.
  * Process Content-Length and Transfer-encoding headers.
